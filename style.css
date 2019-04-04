@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+	grid-template-rows: 1fr 5fr 1fr;
+	grid-template-areas: 
+		"header header header header header"
+		"lside main main main rside"
+		"footer footer footer footer footer";
+	grid-gap: 1em;
+}
+
+header, main, aside, footer {
+	background: brown;
+	padding: 1em;
+}
+
+header {
+	grid-area: header;
+}
+
+aside.left {
+	grid-area: lside;
+}
+
+aside.right {
+	grid-area: rside;
+}
+
+main {
+	grid-area: main;
+}
+
+footer {
+	grid-area: footer;
+}
